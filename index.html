@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop your message</title>
+
+    <style>
+        body{
+            text-align: center;
+            padding:100px;
+            background-color:rgb(5, 0, 10);
+            margin:40px 550px 0px 550px;
+            border-radius:10%;
+            padding-bottom:100px;
+             box-shadow: 5px 10px 20px rgb(124, 243, 227) inset;
+        }
+        h3{
+            font-family: tahoma;
+            font-size:large;
+        }
+        .ribbon {
+  --f: 10px; /* control the folded part*/
+  --r: 15px; /* control the ribbon shape */
+  --t: 10px; /* the top offset */
+  
+  position: absolute;
+  inset: var(--t) calc(-1*var(--f)) auto auto;
+  padding: 0 10px var(--f) calc(10px + var(--r));
+  clip-path: 
+    polygon(0 0,100% 0,100% calc(100% - var(--f)),calc(100% - var(--f)) 100%,
+      calc(100% - var(--f)) calc(100% - var(--f)),0 calc(100% - var(--f)),
+      var(--r) calc(50% - var(--f)/2));
+  background: #BD1550;
+  box-shadow: 0 calc(-1*var(--f)) 0 inset #0005;
+}
+.box {
+  max-width:500px;
+  height:300px;
+  position:relative;
+  border:solid black 2px;
+  background-image:url(bg.jpg);
+  background-size:cover;
+  background-repeat:no-repeat;
+  padding-bottom:20px;
+  border-radius:10%;
+  box-shadow:5px 5px 5px rgb(243, 134, 180), 10px 10px 10px rgb(146, 236, 220), 10px 10px 10px rgb(190, 189, 189);
+  
+}
+html {
+  color: Black;
+  line-height: 1.3em;
+  font-family: sans-serif;
+  font-size: 25px;
+}
+#click{
+    background-color:green;
+    padding:6px;
+    color:white;
+}
+input[type="text"]{
+    padding:3px;
+    background-color:rgb(213, 210, 210);
+}
+
+    </style>
+</head>
+<body>
+    
+        <div class="box">
+            <div class="ribbon">MINI MESSAGE</div><br><br><br>
+            <label style="padding-bottom:20px;font-family:tahoma;font-size:large"> Enter-Message</label><br>
+            <label>✉</label>
+            <input type="text" id="msg-ip" placeholder="DROP YOUR MESSAGE"><br><br>
+            <button id="click" onclick="getMessage()">Submit</button>
+            <p id="msg-op"></p>
+</div>
+</body>
+<script src="msg.js"></script>
+</html>
